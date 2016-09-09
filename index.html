@@ -3,11 +3,33 @@
 <head>
     <title>PinTheStuffTotheBoardterest</title>
     <link rel="stylesheet" type="text/css" href="lib/bower_components/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"> 
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
-<body>
 
+
+<!-- TODO: Initialize our app (registers the module as main app in which controllers can function) app directive = module-->
+<body ng-app="TodoApp">
+<h1>Hello World!</h1>
+  <div ng-controller="TopCtrl">
+    <div ng-include=" 'partials/navbar.html' "> <!--  This is ng-include rather than ng-view because navbar is mostly consistent on page, unlike ng-view, which allows routing. Each view looks like a separate section of webpage or separate webpage-->
+    </div>
+      <!-- TODO: Add a controller for our todo list -->
+      <div ng-controller="TodoCtrl">
+        <div class="row">
+          <div class="col-xs-6 col-xs-offset-3">
+            <!-- Let's call a js function from our HTML. wat? -->
+          </div>
+        </div>
+       </div>
+
+        <div class="row">
+          <div class="col-xs-10 col-xs-offset-1 main-container">
+            <div class="col-xs-12" ng-view></div> <!-- directive that allows routing, will inject things into and out of the div, url will look as if we are changing pages, but we're injecting partials instead need hashMarks in routes (#/items/new = route) -->
+        </div>
+      </div>
+  </div>
+  <!-- TODO: Add a nav controller -->
 
 <!-- Libraries -->
 <script type="text/javascript" src="lib/bower_components/jquery/dist/jquery.min.js"></script>
