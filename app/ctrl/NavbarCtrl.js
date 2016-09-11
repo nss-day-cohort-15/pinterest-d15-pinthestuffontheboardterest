@@ -6,19 +6,19 @@ app.controller("NavbarCtrl", function ($scope, $location, $window, AuthFactory){
     firebase.auth().onAuthStateChanged(function(user){
         if (user){
             $scope.isLoggedIn = true;
-            console.log("Current user logged in?", user.uid)
+            console.log("Current user logged in?", user.uid);
             $scope.$apply();
         } else {
             $scope.isLoggedIn = false;
-            $window.location.href = '#/login'
+            $window.location.href = '#/login';
         }
     });
 
     $scope.logout = function (){
         AuthFactory.logoutUser()
         .then(function(data){
-            console.log('logged out', data)
-        })
-    }
+            console.log('logged out', data);
+        });
+    };
 
 });
