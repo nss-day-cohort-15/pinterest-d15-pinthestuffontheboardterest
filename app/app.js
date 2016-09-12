@@ -12,7 +12,7 @@ app.config(function($routeProvider){
         }).
         when("/boards/public", { //Here we are creating a URL and equating it with its associated partial
             templateUrl: 'partials/public-board.html', //Note that the grammar here specifies "Url", not all upper-case ("URL")
-            controller: "ItemListCtrl"
+            controller: "PublicBoardCtrl"
         }).
         when("/boards/private", {
             templateUrl: 'partials/item-form.html',
