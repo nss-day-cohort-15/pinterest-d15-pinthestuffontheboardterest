@@ -15,7 +15,7 @@
     <div ng-include=" 'partials/navbar.html' "> <!--  This is ng-include rather than ng-view because navbar is mostly consistent on page, unlike ng-view, which allows routing. Each view looks like a separate section of webpage or separate webpage-->
     </div>
       <!-- TODO: Add a controller for our todo list -->
-      <div ng-controller="TodoCtrl">
+      <div >
         <div class="row">
           <div class="col-xs-6 col-xs-offset-3">
             <!-- Let's call a js function from our HTML. wat? -->
@@ -41,18 +41,19 @@
 
 <!-- App.js Routing  -->
 <script type="text/javascript" src="app/app.js"></script>
-<script type="text/javascript" src="app/values/fb-creds.js"></script>
+<script type="text/javascript" src="app/values/fb-credits.js"></script>
 
 <!-- Factories -->
-<script type="text/javascript" src="app/factories/ItemFactory.js"></script>
-<script type="text/javascript" src="app/factories/FilterFactory.js"></script>
-<script type="text/javascript" src="app/factories/AuthFactory.js"></script>
+<script type="text/javascript" src="app/factory/ItemFactory.js"></script>
+<script type="text/javascript" src="app/factory/FilterFactory.js"></script>
+<script type="text/javascript" src="app/factory/AuthFactory.js"></script>
 
-<script type="text/javascript" src="app/controllers/NavbarCtrl.js"></script>
-<script type="text/javascript" src="app/controllers/PublicBoardCtrl.js"></script>
-<script type="text/javascript" src="app/controllers/LoginCtrl.js"></script>
-<script type="text/javascript" src="app/controllers/NewItemCtrl.js"></script>
-<script type="text/javascript" src="app/controllers/PrivateBoardCtrl.js"></script>
-<script type="text/javascript" src="app/controllers/ItemEditCtrl.js"></script>
-<script type="text/javascript" src="app/controllers/ItemViewCtrl.js"></script>
+<script type="text/javascript" src="app/ctrl/NavbarCtrl.js"></script>
+<script type="text/javascript" src="app/ctrl/PublicBoardCtrl.js"></script>
+<script type="text/javascript" src="app/ctrl/LoginCtrl.js"></script>
+<script type="text/javascript" src="app/ctrl/TopCtrl.js"></script>
+<script type="text/javascript" src="app/ctrl/NewItemCtrl.js"></script>
+<script type="text/javascript" src="app/ctrl/PrivateBoardCtrl.js"></script>
+<script type="text/javascript" src="app/ctrl/ItemEditCtrl.js"></script>
+<script type="text/javascript" src="app/ctrl/ItemViewCtrl.js"></script>
 </html>
