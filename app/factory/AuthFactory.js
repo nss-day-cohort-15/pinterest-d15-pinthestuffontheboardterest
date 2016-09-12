@@ -13,11 +13,13 @@ let createUser = function (userObj){
 };
 
     let loginUser = function (userObj) {
+      // console.log(userObj);
         return firebase.auth().signInWithEmailAndPassword(userObj.email, userObj.password)
         .then((userObj)=> {
           // console.log(userObj.uid)
           userId = userObj.uid;
-          console.log(userId);
+          // console.log(userId);
+          return userId;
       })
         .catch(function (error) {
             let errorCode = error.code;

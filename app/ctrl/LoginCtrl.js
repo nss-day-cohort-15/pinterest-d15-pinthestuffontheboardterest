@@ -1,6 +1,6 @@
 "use strict";
 
-app.controller("LoginCtrl", function($scope, $window, AuthFactory) {
+app.controller("LoginCtrl", function($scope,$location, $window, AuthFactory) {
   $scope.account = {
     email: "",
     password: ""
@@ -23,8 +23,10 @@ app.controller("LoginCtrl", function($scope, $window, AuthFactory) {
 
   $scope.login = () => {
     console.log("you clicked login");
+    console.log($scope.account);
     AuthFactory.loginUser($scope.account)
     .then( (data) => {
+      console.log(data);
       if (data) {
       $window.location.href = "#/boards/public";
     } else {
